@@ -106,6 +106,12 @@ export function SiteNav() {
             </DropdownMenuContent>
           </DropdownMenu>
           <Link
+            href="/contact#locations"
+            className="text-md font-bold text-purple-900 hover:text-cyan-600 transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+          >
+            Branches
+          </Link>
+          <Link
             href="/contact"
             className="text-md font-bold text-purple-900 hover:text-cyan-600 transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
           >
@@ -175,6 +181,13 @@ export function SiteNav() {
             >
               Careers
             </Link> */}
+            <Link
+              href="/contact#locations"
+              onClick={() => setOpen(false)}
+              className="block rounded-md px-3 py-2 text-sm text-purple-900 font-bold hover:bg-muted"
+            >
+              Branches
+            </Link>
             <Link
               href="/contact"
               onClick={() => setOpen(false)}

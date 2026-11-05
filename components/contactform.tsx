@@ -21,6 +21,7 @@ export function ContactForm() {
         email: "",
         phone: "",
         company: "",
+        branch: "",
         subject: "",
         message: "",
     })
@@ -30,6 +31,7 @@ export function ContactForm() {
         email: "",
         phone: "",
         company: "",
+        branch: "",
         subject: "",
         message: "",
     })
@@ -68,6 +70,7 @@ export function ContactForm() {
                 `Email Address: ${formDataObj.get("email")}\n` +
                 `Phone: ${formDataObj.get("phone") || "-"}\n` +
                 `Company: ${formDataObj.get("company") || "-"}\n` +
+                `Branch: ${formDataObj.get("branch") || "-"}\n` +
                 `Subject: ${formDataObj.get("subject") || "-"}\n\n` +
                 `Message: ${formDataObj.get("message")}`
 
@@ -188,6 +191,35 @@ export function ContactForm() {
                                             placeholder="enter your company name"
                                         />
                                     </div>
+                                </div>
+
+                                <div className="mb-6">
+                                    <label htmlFor="branch" className="block text-sm font-medium text-foreground mb-2">
+                                        Branch
+                                    </label>
+                                    <select
+                                        id="branch"
+                                        name="branch"
+                                        value={formData.branch}
+                                        onChange={handleChange}
+                                        disabled={isSubmitting}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 focus-ring bg-white"
+                                    >
+                                        <option value="">Select a branch (optional)</option>
+                                        <optgroup label="OMAN">
+                                            <option value="Oman – Sohar">PARKER EXPRESS SHIPPING AND DEVELOPMENT SPC, Sohar, Oman</option>
+                                        </optgroup>
+                                        <optgroup label="INDIA">
+                                            <option value="India – Mangalore">PAREX SHIPPING INDIA PVT, Mangalore</option>
+                                            <option value="India – Gandhidham">PAREX INDIA PVT BR., Gandhidham, Kutch</option>
+                                        </optgroup>
+                                        <optgroup label="UAE">
+                                            <option value="UAE – Ras Al Khaimah (RAKEZ)">Ras Al Khaimah – RAKEZ Amenity Center</option>
+                                            <option value="UAE – Head Office (Julphar Towers)">Head Office – Julphar Towers, RAK</option>
+                                            <option value="UAE – Sharjah (HFZE)">Sharjah – Hamriyah Free Zone (HFZE)</option>
+                                            <option value="UAE – Al Hamra Free Zone">Al Hamra Industrial Free Zone, RAK</option>
+                                        </optgroup>
+                                    </select>
                                 </div>
 
                                 <div className="mb-6">
